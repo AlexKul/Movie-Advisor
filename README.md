@@ -1,6 +1,6 @@
-# Black Jack game (Mobile)
+# Movie Advisor 
 
-This is an idea I've had of a simple Black Jack game that allows you to earn lots of money and buy amazing things such as a house, a car, or a boat. Anything that would make you feel satisfied.
+This is a Ruby-on-Rails web app that will suggest the user a new movie to watch. It will use the users information and previous actions to predict and give the best suggestion possible.
 
 # Development
 
@@ -8,6 +8,6 @@ This is an idea I've had of a simple Black Jack game that allows you to earn lot
 2. Run vagrant in the correct directory (eg. `vagrant up`)
 3. `vagrant ssh`
 4. `cd /vagrant`
-5. `bin/rails s -b 0.0.0.0`
+5. `rails s -b 0.0.0.0`
 
 Visit `localhost:3000` in your browser. 

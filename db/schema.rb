@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026024126) do
+ActiveRecord::Schema.define(version: 20170307214737) do
 
   create_table "black_jack_sessions", force: :cascade do |t|
     t.integer  "player_total", default: 0
@@ -38,6 +38,11 @@ ActiveRecord::Schema.define(version: 20161026024126) do
     t.string   "organization_website",     null: false
     t.text     "organization_description", null: false
     t.text     "project_description",      null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "project_evaluations", force: :cascade do |t|
