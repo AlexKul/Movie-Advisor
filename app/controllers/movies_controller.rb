@@ -17,5 +17,18 @@ class MoviesController < ApplicationController
   	
   end
 
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
+
+  def update
+    @movie = Movie.find(params[:id])
+    @movie.update_attribute(:picture, params[:movie][:picture])
+  end
   
 end

@@ -1,0 +1,43 @@
+
+<div class="begin">
+	<div class="top">
+		<h3>Total suggestions Available: <%= @movies.count %></h3>
+		<b> Would you like to watch...</b>
+	</div>
+
+	<% if @movies.any? %>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+		  <!-- Indicators -->
+			<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<div class="info">
+						<h2>Title</h2>
+						<p>Year</p>
+						<p>Genre</p>
+					</div>
+					<a href="/"><img src="assets/movie.png" alt="Movie"></a>
+				</div>
+
+				<%= render(@movies)%>
+
+				  <div class="controls">
+				  	<a class="like" href="#myCarousel" role="button" data-slide="next"><img src="assets/like.png"></a>
+				  	<a class="nope" href="#myCarousel" role="button" data-slide="next"><img src="assets/x.png"></a>
+				  </div>
+
+			</div>
+
+		</div>
+
+		
+	<% end if%>
+
+</div>

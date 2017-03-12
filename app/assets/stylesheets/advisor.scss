@@ -1,0 +1,56 @@
+
+div.intro{
+  background-image: url('movie-back.png');
+  height: 1000px;
+
+  a.begin{
+  	position: absolute;
+  	top: 470px;
+	  margin-left: 40%;
+	  margin-right: 40%;
+  	background: black;
+  	color: white;
+  	border: 2px solid white;
+  }
+
+}
+
+div.carousel{
+  .item a{
+    img{
+      margin-left: 40%;
+      margin-right: 40%;
+      height: 400px;
+
+    } 
+  }
+
+}
+
+div.begin{
+  .top{
+    text-align: center;
+  }
+}
+
+div.controls{
+  margin: 30px;
+  margin-left: 40%;
+
+
+  .like{
+    padding-right: 50px;
+    img{
+      height: 40px;
+    }
+  }
+  .nope{
+    padding-left: 120px;
+    img{
+      height: 40px;
+    }
+  }
+}
+
+
+

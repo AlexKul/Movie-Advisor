@@ -2,11 +2,11 @@ class AdvisorController < ApplicationController
   
 
   def index
-  	@movies = Movie.all
+  	
   end
 
-  def show
-  	
+  def begin
+  	@movies = Movie.all
   end
 
   

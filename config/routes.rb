@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'advisor#index'
 
+  get 'begin' => 'advisor#begin'
+
   resources :movies do
     get 'like' => 'movie#like'
     get 'nope' => 'movie#nope'

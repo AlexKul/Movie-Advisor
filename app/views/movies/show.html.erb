@@ -1,0 +1,11 @@
+
+	<div class="carousel-caption">
+		<img src="<%= @movie.picture.url %>" alt="<%= @movie.title %>" style="height: 400px">
+		<p><%= @movie.title %> <%= @movie.year %></p>
+		<p>Rotten Tomato Rating: <%= @movie.rating %></p>
+	</div>
+
+	<div class="update">
+		<h3>Admin privileges:</h3>
+		<%= link_to 'Edit This', edit_movie_path(@movie) %>
+	</div>
