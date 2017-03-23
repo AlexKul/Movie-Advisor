@@ -7,17 +7,17 @@
 </div>
 
 <div class="update">
-		<h3>Update Movie Info</h3>
-		<%= form_for @movie, :url => {:action => 'update'}, :html => { :multipart => true } do |form| %>
-		  <p>Title</p>
-		  <%= form.text_field :title %>
-		  <p>Year</p>
-		  <%= form.number_field :year %>
-		  <p>Rating (%)</p>
-		  <%= form.text_field :rating %>
-		  <p>Picture</p>
-		  <%= form.file_field :picture %>
-		  <br>
-		  <%= form.submit "update" %>
-		<% end %>
+	<h3>Update Movie Info</h3>
+	<%= form_for @movie, :url => {:action => 'update'}, :html => { :multipart => true } do |form| %>
+	  <p>Title</p>
+	  <%= form.text_field :title %>
+	  <p>Year</p>
+	  <%= form.number_field :year %>
+	  <p>Rating (%)</p>
+	  <%= form.text_field :rating %>
+	  <p>Picture</p>
+	  <%= form.file_field :picture %>
+	  <br>
+	  <%= form.submit "update" %>
+	<% end %>
 </div>

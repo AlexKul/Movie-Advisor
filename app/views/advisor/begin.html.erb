@@ -5,7 +5,7 @@
 		<b> Would you like to watch...</b>
 	</div>
 
-	<% if @movies.any? %>
+	<% if @movies.present? && @movies.any? %>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 		  <!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -32,12 +32,9 @@
 				  	<a class="like" href="#myCarousel" role="button" data-slide="next"><img src="assets/like.png"></a>
 				  	<a class="nope" href="#myCarousel" role="button" data-slide="next"><img src="assets/x.png"></a>
 				  </div>
-
 			</div>
 
 		</div>
-
-		
 	<% end if%>
 
 </div>
