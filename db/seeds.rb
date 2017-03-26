@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(name: 'admin', password: 'admin')
+User.create(name: 'admin', email: "email", password: 'admin')
 
 
 movies_list = [

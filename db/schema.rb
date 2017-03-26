@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170311205951) do
+ActiveRecord::Schema.define(version: 20170326183030) do
 
   create_table "movies", force: :cascade do |t|
     t.datetime "created_at",                               null: false
@@ -25,11 +25,20 @@ ActiveRecord::Schema.define(version: 20170311205951) do
     t.datetime "picture_updated_at"
   end
 
+  create_table "relations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "movie_id"
+    t.boolean "seen"
+    t.boolean "like"
+  end
+
+  add_index "relations", ["movie_id"], name: "index_relations_on_movie_id"
+  add_index "relations", ["user_id"], name: "index_relations_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name",                   default: "", null: false
-    t.string   "password_digest",                     null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
