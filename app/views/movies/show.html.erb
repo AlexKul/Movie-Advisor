@@ -1,9 +1,11 @@
 
 	<div class="carousel-caption">
-		<img src="<%= @movie.picture.url %>" alt="<%= @movie.title %>" style="height: 400px">
-		<p><%= @movie.title %> <%= @movie.year %></p>
-		<p>Rotten Tomato Rating: <%= @movie.rating %></p>
+
+
+		<blockquote class="embedly-card"><h4><a class="movie-image" href="<%= @movie.link %>/image"><%= @movie.title %> (<%= @movie.year %>)</a></h4><p>Imdb Score: <%= @movie.score %></p></blockquote>
+		<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 	</div>
+
 
 	<div class="update">
 		<h3>Admin privileges:</h3>

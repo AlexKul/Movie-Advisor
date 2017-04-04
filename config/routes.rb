@@ -5,10 +5,21 @@ Rails.application.routes.draw do
 
   get 'begin' => 'advisor#begin'
 
+  get 'genre' => 'advisor#genre'
+  post 'genre' => 'advisor#genre'
+
   resources :movies do
-    get 'like' => 'movie#like'
-    get 'nope' => 'movie#nope'
-    get 'seen' => 'movie#seen'
+    get 'like' => 'movies#like'
+    get 'nope' => 'movies#nope'
+    get 'seen_like' => 'movies#seen_like'
+    get 'seen_nope' => 'movies#seen_nope'
+
+  end 
+
+  resources :users do
+    get 'watchlist' => 'user#watchlist'
+    get 'nopelist' => 'user#nopelist'
+    get 'seenlist' => 'user#seenlist'
   end 
   
   #root to:

@@ -1,0 +1,9 @@
+
+<div class="seen-list">
+	<% if @seenlist.any? %>
+		<h3>You've seen:</h3>
+		<%= render @seenlist %>
+	<% else %>
+		<h3>You havent seen any of our movie list.</h3>
+	<% end %>
+</div>

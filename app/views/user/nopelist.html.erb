@@ -1,0 +1,9 @@
+
+<div class="nope-list">	
+	<% if @nopelist.any? %>
+		<h3>You said you dont wanna watch: </h3>
+		<%= render @nopelist %>
+	<% else %>
+		<h3>Your dislike list is empty</h3>
+	<% end %>
+</div>

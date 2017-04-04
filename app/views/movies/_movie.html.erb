@@ -1,18 +1,21 @@
 
-<div class="item">
+<div class="item suggestion <%= "active" if movie.id == @first_movie.id %>">
 	<div class="info">
-		<h2><%= movie.title %></h2>
-		<p><%= movie.year %></p>
-		<p>Action</p>
 	</div>
 
-	<a href="<%= movie_path(movie) %>"><img src="<%= movie.picture.url %>" alt="<%= movie.title %>"></a>
+
+	<blockquote class="embedly-card" data-card-controls="0"><h4><a class="movie-image" href="<%= movie.link %>/image"><%= movie.title %> (<%= movie.year %>)</a></h4><p>Imdb Score: <%= movie.score %></p></blockquote>
+	<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+	<div class="movie-link">
+		<a href="<%= movie_path(movie) %>">Go to Movie page</a>
+	</div>
 
 
-	<%= link_to "Like", movie_like_path(movie) %>
-
-	<%= link_to "Nope", movie_nope_path(movie) %>
-
-	<%= link_to "Seen", movie_seen_path(movie) %>
-
+	<div class="buttons">
+		<a class="like btn btn-default" href="<%= movie_like_path(movie) %>" role="button" data-slide="next" remote="true"><b>✔</b></a>
+		<a class="nope btn btn-default" href="<%= movie_nope_path(movie) %>" role="button" data-slide="next" remote="true"><b>X</b></a>
+		<a class="btn btn-default" href="<%= movie_seen_like_path(movie) %>" role="button" data-slide="next" remote="true"><b>SEEN IT</b></a>
+	</div>
+	
 </div>

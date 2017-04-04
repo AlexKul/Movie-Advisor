@@ -1,0 +1,17 @@
+div.relation{
+  margin: 10px;
+  background: #2a2c30;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  img{
+  	height: 200px;
+  }
+}
+
+div.info{
+  position: absolute;
+  margin-left: 25%;
+  color: white;
+  z-index: 1;
+}

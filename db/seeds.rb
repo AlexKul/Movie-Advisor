@@ -6,15 +6,30 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(name: 'admin', email: "email", password: 'admin')
+    require 'csv'    
+
+    imdb_movies = []
+      CSV.foreach( Dir.pwd+'/app/assets/images/movie_metadata.csv', :headers => true) do |row|
+        imdb_movies << row
+
+      end
 
 
-movies_list = [
-  [ "Forrest Gump", 1994, '72%'],
-  [ "Avatar", 2009, '83%' ],
-  [ "Pulp Fiction", 1994, '94%' ],
-]
+    imdb_movies.each do |movie|
 
-movies_list.each do |title, year, rating|
-  Movie.create( title: title, year: year, rating: rating )
-end
+      title = 'unknown'
+      year = 'unknown'
+      genre = 'unknown'
+      score = 'unknown'
+      link = 'unknown'
+    
+      title = movie[11] 
+      year = movie[23] 
+      genre = movie[9] 
+      score = movie[25] 
+      link = movie[17] 
+
+      Movie.find_or_create_by title: title, year: year, score: score, genre: genre, link: link 
+    end
+
+

@@ -1,0 +1,9 @@
+
+<div class="watch-list">
+	<% if @watchlist.any? %>
+		<h3>You liked:</h3>
+		<%= render @watchlist %>
+	<% else %>
+		<h3>Your watch list is empty.</h3>
+	<% end %>
+</div>

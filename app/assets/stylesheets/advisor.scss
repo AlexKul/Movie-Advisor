@@ -3,19 +3,38 @@ div.intro{
   background-image: url('movie-back.png');
   height: 1000px;
 
-  a.begin{
+  
+
+  .begin-form{
   	position: absolute;
-  	top: 470px;
+  	top: 370px;
 	  margin-left: 40%;
 	  margin-right: 40%;
   	background: black;
-  	color: white;
   	border: 2px solid white;
+    padding: 5px;
+  }
+
+  .logged-out{
+    position: absolute;
+    top: 450px;
+    margin-left: 40%;
+    margin-right: 40%;
+    background: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
   }
 
 }
 
 div.carousel{
+  .carousel-indicators{
+    margin: 10px;
+  }
+
+
   .item a{
     img{
       margin-left: 40%;
@@ -23,6 +42,24 @@ div.carousel{
       height: 400px;
 
     } 
+  }
+
+    div.buttons{
+      margin: 20px;
+      margin-left: 40%;
+
+      .like{
+        img{
+          height: 40px;
+          margin: 0;
+        }
+      }
+      .nope{
+        img{
+          height: 40px;
+          margin: 0;
+        }
+      }
   }
 
 }
@@ -33,24 +70,6 @@ div.begin{
   }
 }
 
-div.controls{
-  margin: 30px;
-  margin-left: 40%;
-
-
-  .like{
-    padding-right: 50px;
-    img{
-      height: 40px;
-    }
-  }
-  .nope{
-    padding-left: 120px;
-    img{
-      height: 40px;
-    }
-  }
-}
 
 
 
