@@ -5,12 +5,9 @@
 		<h3><%= @movie.title %></h3>
 		<p><%= @movie.year %></p>
 		<p>Imdb Score: <%= @movie.score %></p>
+		<h1></h1>
+		<h1></h1>
+		<h1></h1>
+		<a src="http://www.canistream.it/search/movie/<%= @movie.title%>">Can I stream it?</a>
 
-		<h1></h1>
-		<h1></h1>
-		<h1></h1>
-
-		<div class="frame" style="left: 25%; width: 750px; height: 220px; overflow: hidden; position: relative;">
-			<iframe frameborder="0" src="http://www.canistream.it/search/movie/<%= @movie.title%>" scrolling="no" style=" position: absolute; top: -950px; left: -70px; width: 1280px; height: 1200px;"></iframe>
-		</div>
 	</div>

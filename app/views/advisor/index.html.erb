@@ -5,9 +5,9 @@
 		<div class="begin-form">
 			<%= form_tag genre_path do %>
 			    <%=label_tag 'Choose a movie genre:' %>
-			    <%= select_tag('name', options_for_select([['Any'],['Action'], ['Adventure'], ['Comedy'], ['Crime'],  ['Drama'], ['Family'], ['Fantasy'], ['Historical'], ['Horror'], ['Mystery'], ['Thriller'], ['Romance'], ['Sci-Fi'],]), style: 'margin-bottom: 15px;', class: 'container') %>
+			    <%= select_tag('name', options_for_select([['Any'],['Action'], ['Adventure'], ['Comedy'], ['Crime'],  ['Drama'], ['Family'], ['Fantasy'], ['Historical'], ['Horror'], ['Mystery'], ['Thriller'], ['Romance'], ['Sci-Fi'],]), style: 'margin-bottom: 15px;') %>
 
-			    <div><%= submit_tag "▷ Begin your experience", style: 'background: white;', class: 'container' %></div>
+			    <div><%= submit_tag "▷ Begin your experience", style: 'background: white;' %></div>
 			<% end -%>
 
 
