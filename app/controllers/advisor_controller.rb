@@ -7,7 +7,7 @@ class AdvisorController < ApplicationController
 
   def begin
   	@movies = Movie.all.order(score: :desc)
-
+    @movies = @movies.first(20)
   	@relations = Relation.all.where user: current_user
 
   	@old_movies = []
@@ -26,7 +26,7 @@ class AdvisorController < ApplicationController
   		redirect_to begin_path
   	else
   		@movies = Movie.all.where("genre like ?", "%"+ @genre +"%").order(score: :desc) if @genre.present?
-
+      @movies = @movies.first(20)
 	  	#@relations = Relation.all.where user: current_user
 
 	  	#@old_movies = []
