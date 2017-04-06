@@ -1,11 +1,13 @@
 
 <div class="begin">
 	<div class="top">
-		<h3>Total new suggestions available: <%= @new_movies.count %></h3>
+		<h3>Total mixed suggestions available: <%= @new_movies.count %></h3>
 		<b> Would you like to watch...</b>
 	</div>
 
 	<% if @new_movies.present? && @new_movies.any? %>
+
+
 		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 		  <!-- Indicators -->
 			<ol class="carousel-indicators">

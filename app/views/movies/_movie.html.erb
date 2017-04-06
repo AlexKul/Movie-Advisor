@@ -8,14 +8,14 @@
 	<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 	<div class="movie-link">
-		<a href="<%= movie_path(movie) %>">Go to Movie page</a>
+		<a href="<%= movie_path(movie) %>">More about this movie</a>
 	</div>
 
 
 	<div class="buttons">
-		<a class="like btn btn-default" href="<%= movie_like_path(movie) %>" role="button" data-slide="next" remote="true"><b>✔</b></a>
-		<a class="nope btn btn-default" href="<%= movie_nope_path(movie) %>" role="button" data-slide="next" remote="true"><b>X</b></a>
-		<a class="btn btn-default" href="<%= movie_seen_like_path(movie) %>" role="button" data-slide="next" remote="true"><b>SEEN IT</b></a>
+		<%= link_to "✔ Yes", movie_like_path(movie), :method => :post, class: "like btn btn-default" , remote: true, :'data-target' => "#myCarousel", :'data-slide' =>"next" %>
+		<%= link_to "X No", movie_nope_path(movie), :method => :post, class: "nope btn btn-default" , remote: true, :'data-target' => "#myCarousel", :'data-slide' =>"next"  %>
+		<%= link_to "SEEN IT", movie_seen_like_path(movie), :method => :post, class: "btn btn-default", remote: true, :'data-target' => "#myCarousel", :'data-slide' =>"next" %>
 	</div>
 	
 </div>

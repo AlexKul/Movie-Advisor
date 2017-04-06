@@ -9,10 +9,15 @@ Rails.application.routes.draw do
   post 'genre' => 'advisor#genre'
 
   resources :movies do
-    get 'like' => 'movies#like'
-    get 'nope' => 'movies#nope'
-    get 'seen_like' => 'movies#seen_like'
-    get 'seen_nope' => 'movies#seen_nope'
+    post 'like' => 'movies#like'
+    post 'nope' => 'movies#nope'
+    post 'seen_like' => 'movies#seen_like'
+    post 'seen_nope' => 'movies#seen_nope'
+  end 
+
+  resources :relations do
+    post 'remove' => 'relations#remove'
+    post 'move_to_seen' => 'relations#moveToSeen'
 
   end 
 

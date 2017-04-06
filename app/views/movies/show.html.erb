@@ -1,13 +1,16 @@
 
-	<div class="carousel-caption">
+	<div class="read-more">
+		
 
+		<h3><%= @movie.title %></h3>
+		<p><%= @movie.year %></p>
+		<p>Imdb Score: <%= @movie.score %></p>
 
-		<blockquote class="embedly-card"><h4><a class="movie-image" href="<%= @movie.link %>/image"><%= @movie.title %> (<%= @movie.year %>)</a></h4><p>Imdb Score: <%= @movie.score %></p></blockquote>
-		<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-	</div>
+		<h1></h1>
+		<h1></h1>
+		<h1></h1>
 
-
-	<div class="update">
-		<h3>Admin privileges:</h3>
-		<%= link_to 'Edit This', edit_movie_path(@movie) %>
+		<div class="frame">
+			<iframe frameborder="0" src="http://www.canistream.it/search/movie/<%= @movie.title%>" scrolling="no" id="my-iframe"></iframe>
+		</div>
 	</div>

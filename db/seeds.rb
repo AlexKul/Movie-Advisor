@@ -15,7 +15,7 @@
       end
 
 
-    imdb_movies.each do |movie|
+    imdb_movies.first(500).each do |movie|
 
       title = 'unknown'
       year = 'unknown'
@@ -29,7 +29,11 @@
       score = movie[25] 
       link = movie[17] 
 
-      Movie.find_or_create_by title: title, year: year, score: score, genre: genre, link: link 
+      begin
+        Movie.find_or_create_by title: title, year: year, score: score, genre: genre, link: link 
+      rescue
+        next
+      end
     end
 
 

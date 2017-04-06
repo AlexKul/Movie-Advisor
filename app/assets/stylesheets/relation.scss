@@ -1,11 +1,26 @@
 div.relation{
+  padding: 15px;
   margin: 10px;
   background: #2a2c30;
   color: white;
   text-align: center;
   display: inline-block;
+  height: 70px;
+  .container{
+    width: 400px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
   img{
   	height: 200px;
+  }
+  .seen-btn{
+    float: left;
+  }
+  .remove-btn{
+    float: right;
   }
 }
 

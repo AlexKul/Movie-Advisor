@@ -1,11 +1,11 @@
 
 <div class="begin">
-
-	<% if @new_movies.present? && @new_movies.any? %>
 		<div class="top">
-			<h3>Total new suggestions available: <%= @new_movies.count %></h3>
+			<h3>Total <%= @genre %> suggestions available: <%= @movies.count %></h3>
 			<b> Would you like to watch...</b>
 		</div>
+	<% if @movies.present? && @movies.any? %>
+
 		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 		  <!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -21,13 +21,13 @@
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
-				<%= render(@new_movies)%>
+				<%= render(@movies)%>
 			</div>
 
 		</div>
 
 	<% else %>
-
+		<%= @movies%>
 		<h3>Sorry no results for <%= @genre %></h3>
 	<% end if%>
 

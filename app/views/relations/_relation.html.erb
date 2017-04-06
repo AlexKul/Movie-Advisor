@@ -1,5 +1,12 @@
 
 	<div class="relation">
-		<p><%= relation.movie.title %></p>
-		<a href="<%= movie_path(relation.movie)%>"><%= image_tag relation.movie.picture %></a>
+		<% if relation.present? %>
+			<a href="<%= movie_path(relation.movie)%>"><div class="container"><p><%= relation.movie.title %>(<%= relation.movie.year%>)</p></div></a>
+			<% if !relation.seen && relation.like %>
+				<%= link_to "➥ Seen", relation_move_to_seen_path(relation), :method => :post, class: "btn btn-default seen-btn" , remote: true, style: "color: black" %>
+			<% end %>
+				<%= link_to "✕ Remove", relation_remove_path(relation), :method => :post, class: "btn btn-danger remove-btn", style: "color: black" %>
+		<% else %>
+			<p>?</p>
+		<% end %>
 	</div>
