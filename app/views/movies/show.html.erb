@@ -5,9 +5,7 @@
 		<h3><%= @movie.title %></h3>
 		<p><%= @movie.year %></p>
 		<p>Imdb Score: <%= @movie.score %></p>
-		<h1></h1>
-		<h1></h1>
-		<h1></h1>
-		<a src="http://www.canistream.it/search/movie/<%= @movie.title%>">Can I stream it?</a>
+
+		<a href="http://www.canistream.it/search/movie/<%= @movie.title%>" class="btn btn-default" target="_blank">Can I stream it?</a>
 
 	</div>
